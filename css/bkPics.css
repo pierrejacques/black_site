@@ -1,31 +1,31 @@
-#edu>div.icon{  background-image: url('../icon/about-edu.png');}
-#exp>div.icon{  background-image: url('../icon/about-exp.png');}
-#tour>div.icon{  background-image: url('../icon/about-tour.png');}
-#skill>div.icon{  background-image: url('../icon/about-skill.png');}
-#quali>div.icon{  background-image: url('../icon/about-quali.png');}
+#edu>div.icon{  background-image: url('../icon/about_edu.png');}
+#exp>div.icon{  background-image: url('../icon/about_exp.png');}
+#tour>div.icon{  background-image: url('../icon/about_tour.png');}
+#skill>div.icon{  background-image: url('../icon/about_skill.png');}
+#quali>div.icon{  background-image: url('../icon/about_quali.png');}
 #close {    background-image: url("../icon/close.png");}
 #prev {    background-image: url("../icon/prev.png");}
 #next {    background-image: url("../icon/next.png");}
-#product {      background-image: url(../icon/visual_product.png);  }
-#product-1 {    background-image: url('../img/visual-01.jpg');}
-#product-2 {    background-image: url(../img/visual-02.jpg);}
-#product-3 {    background-image: url('../img/visual-03.jpg');}
-#product-4 {    background-image: url('../img/visual-04.jpg');}
-#product-5 {    background-image: url('../img/visual-05.jpg');}
-#product-6 {    background-image: url('../img/visual-06.jpg');}
-#product-7 {    background-image: url('../img/visual-07.jpg');}
+#product {      background-image: url('../icon/visual_product.png');  }
+#product-1 {    background-image: url('../img/visual_01.jpg');}
+#product-2 {    background-image: url('../img/visual_02.jpg');}
+#product-3 {    background-image: url('../img/visual_03.jpg');}
+#product-4 {    background-image: url('../img/visual_04.jpg');}
+#product-5 {    background-image: url('../img/visual_05.jpg');}
+#product-6 {    background-image: url('../img/visual_06.jpg');}
+#product-7 {    background-image: url('../img/visual_07.jpg');}
 #modeling {    background-image: url('../icon/visual_modeling.png');}
-#modeling-1 {    background-image: url('../img/visual-08.jpg');}
-#modeling-2 {    background-image: url('../img/visual-09.jpg');}
+#modeling-1 {    background-image: url('../img/visual_08.jpg');}
+#modeling-2 {    background-image: url('../img/visual_09.jpg');}
 #sketch {    background-image: url('../icon/visual_sketch.png');}
-#sketch-1 {    background-image: url('../img/visual-10.jpg');}
-#sketch-2 {    background-image: url('../img/visual-11.jpg');}
-#sketch-3 {    background-image: url('../img/visual-12.jpg');}
-#sketch-4 {    background-image: url('../img/visual-13.jpg');}
-#sketch-5 {    background-image: url('../img/visual-14.jpg');}
-#sketch-6 {    background-image: url('../img/visual-15.jpg');}
-#sketch-7 {    background-image: url('../img/visual-16.jpg');}
-#sketch-8 {    background-image: url('../img/visual-17.jpg');}
+#sketch-1 {    background-image: url('../img/visual_10.jpg');}
+#sketch-2 {    background-image: url('../img/visual_11.jpg');}
+#sketch-3 {    background-image: url('../img/visual_12.jpg');}
+#sketch-4 {    background-image: url('../img/visual_13.jpg');}
+#sketch-5 {    background-image: url('../img/visual_14.jpg');}
+#sketch-6 {    background-image: url('../img/visual_15.jpg');}
+#sketch-7 {    background-image: url('../img/visual_16.jpg');}
+#sketch-8 {    background-image: url('../img/visual_17.jpg');}
 #photo {    background-image: url('../icon/visual_photo.png');}
 #photo-1 {background-image: url('../img/photo/p1.jpg');}
 #photo-2 {background-image: url('../img/photo/p2.jpg');}
@@ -42,8 +42,6 @@
 #photo-13 {background-image: url('../img/photo/p13.jpg');}
 #photo-14 {background-image: url('../img/photo/p14.jpg');}
 #web {    background-image: url('../icon/visual_web.png');}
-#web-1 {    background-image: url('../img/web-1.jpg');}
-#profile-download{ background: url(../icon/download.png);}
-#down {
-    background-image: url(../icon/down.png);
-}
+#web-1 {    background-image: url('../img/web_1.jpg');}
+#profile-download { background: url('../icon/download.png');}
+#down {  background-image: url('../icon/down.png'); }

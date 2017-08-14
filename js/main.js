@@ -10,9 +10,9 @@ var $playing = $("#playing");
 var articleHeight = [];
 var bias = [-100,-250,-100,-200];  //用于纠正滚到的最佳位置
 var opct = [0.4,0.8,0.9,0.8];  //opacity节点
-var canvas = document.querySelectorAll('canvas.canvas-movee');
+// var canvas = document.querySelectorAll('canvas.canvas-movee');
 
-function adjStyle(){  
+function adjStyle(){
     //排版优化
     if ($window.width() <= 768){
         $audio.addClass("mute");
@@ -62,7 +62,7 @@ $(document).ready(function(){
       $window.on('resize',function(){//窗口大小响应
           adjStyle();
       });
-      //滚动监听   
+      //滚动监听
       $window.on('scroll',function(){
         var position = $window.scrollTop();
         //导航显示/隐藏
@@ -144,78 +144,78 @@ $(document).ready(function(){
         $audio[0].play();
     }
     });
-    for (var i=0;i<canvas.length;i++){
-            moveeCanvas(canvas[i]);
-    }
+    // for (var i=0;i<canvas.length;i++){
+    //         moveeCanvas(canvas[i]);
+    // }
 })
 
 ////////////////////////canvas functions
-
-function moveeCanvas(c){
-    var cImg = document.createElement('img');
-    cImg.setAttribute("src",c.getAttribute("src"));
-    cImg.onload = function(){
-        //object constructing
-        c['img'] = cImg;
-        c.width = window.innerWidth-10;
-        c.height = c.width*c.img.height/c.img.width;
-        var calib = c.height;
-        c['r'] = /\bright\b/i.test(c.className) || false;  //the direction of the movee
-        c['cvsRedraw'] = function(){           //redraw the Img
-            var ctx = this.getContext('2d');
-            ctx.globalCompositeOperation = "source-over";
-            ctx.clearRect(0,0,this.width,this.height);
-            ctx.drawImage(this.img,0,0,this.width,this.height);
-        }
-        c['cvsGradient'] = function(){      //transparent gradient
-        const range = 0.3;
-        var ctx = this.getContext('2d');
-        ctx.globalCompositeOperation="destination-in";
-        if (this.r){
-            var grd=ctx.createLinearGradient(this.width*range,0,this.width,0);
-            grd.addColorStop(0,"transparent");
-            grd.addColorStop(1-range,"white");
-            ctx.fillStyle=grd;
-            ctx.fillRect(this.width*range,0,this.width,this.height);
-        }
-        else{
-            var grd=ctx.createLinearGradient(0,0,this.width*(1-range),0);
-            grd.addColorStop(range,"white");
-            grd.addColorStop(1,"transparent");
-            ctx.fillStyle=grd;
-            ctx.fillRect(0,0,this.width*(1-range),this.height);
-        }
-        }
-        c['cvsClip'] =  function(t,deg){      //clip cvs while scrolling
-            var h = 70;  //heightByPercentage
-            var v = 1.5;  //velocity
-            var k = Math.sin(deg/180*3.14159);
-            var y0 = v*t / this.height * 100;
-            var y1 = y0 - h;
-            var side=100;
-            var x0 = 100 - v*t / k / this.width * 100;
-            var x1 = 100 -y1*this.height/k/this.width;
-            if (this.r) {side = 0;x0 = 100 - x0;x1 = 100 - x1;}
-            str = 'polygon('+side+'% '+y0+'%,'+x0+'% '+0+'%,'+x1+'% '+0+'%,'+side+'% '+y1+'%)'; 
-            this.style.clipPath = str;
-        }    
-        //addListener
-        window.addEventListener('scroll',function(){
-            var t = document.body.scrollTop-c.offsetTop+calib;
-            if (t>0 && t<c.height+calib){
-                c.cvsClip(t,17);
-            }
-        });
-        window.addEventListener('resize',function(){
-            c.width = window.innerWidth-10;
-            c.height = c.width*c.img.height/c.img.width; 
-            c.cvsRedraw();
-            c.cvsGradient();
-            c.cvsClip(document.body.scrollTop-c.offsetTop+calib,17);
-        });
-        //initializing
-        c.cvsRedraw();
-        c.cvsGradient();
-        c.cvsClip(document.body.scrollTop-c.offsetTop+calib,17);
-    }
-}
+//
+// function moveeCanvas(c){
+//     var cImg = document.createElement('img');
+//     cImg.setAttribute("src",c.getAttribute("src"));
+//     cImg.onload = function(){
+//         //object constructing
+//         c['img'] = cImg;
+//         c.width = window.innerWidth-10;
+//         c.height = c.width*c.img.height/c.img.width;
+//         var calib = c.height;
+//         c['r'] = /\bright\b/i.test(c.className) || false;  //the direction of the movee
+//         c['cvsRedraw'] = function(){           //redraw the Img
+//             var ctx = this.getContext('2d');
+//             ctx.globalCompositeOperation = "source-over";
+//             ctx.clearRect(0,0,this.width,this.height);
+//             ctx.drawImage(this.img,0,0,this.width,this.height);
+//         }
+//         c['cvsGradient'] = function(){      //transparent gradient
+//         const range = 0.3;
+//         var ctx = this.getContext('2d');
+//         ctx.globalCompositeOperation="destination-in";
+//         if (this.r){
+//             var grd=ctx.createLinearGradient(this.width*range,0,this.width,0);
+//             grd.addColorStop(0,"transparent");
+//             grd.addColorStop(1-range,"white");
+//             ctx.fillStyle=grd;
+//             ctx.fillRect(this.width*range,0,this.width,this.height);
+//         }
+//         else{
+//             var grd=ctx.createLinearGradient(0,0,this.width*(1-range),0);
+//             grd.addColorStop(range,"white");
+//             grd.addColorStop(1,"transparent");
+//             ctx.fillStyle=grd;
+//             ctx.fillRect(0,0,this.width*(1-range),this.height);
+//         }
+//         }
+//         c['cvsClip'] =  function(t,deg){      //clip cvs while scrolling
+//             var h = 70;  //heightByPercentage
+//             var v = 1.5;  //velocity
+//             var k = Math.sin(deg/180*3.14159);
+//             var y0 = v*t / this.height * 100;
+//             var y1 = y0 - h;
+//             var side=100;
+//             var x0 = 100 - v*t / k / this.width * 100;
+//             var x1 = 100 -y1*this.height/k/this.width;
+//             if (this.r) {side = 0;x0 = 100 - x0;x1 = 100 - x1;}
+//             str = 'polygon('+side+'% '+y0+'%,'+x0+'% '+0+'%,'+x1+'% '+0+'%,'+side+'% '+y1+'%)';
+//             this.style.clipPath = str;
+//         }
+//         //addListener
+//         window.addEventListener('scroll',function(){
+//             var t = document.body.scrollTop-c.offsetTop+calib;
+//             if (t>0 && t<c.height+calib){
+//                 c.cvsClip(t,17);
+//             }
+//         });
+//         window.addEventListener('resize',function(){
+//             c.width = window.innerWidth-10;
+//             c.height = c.width*c.img.height/c.img.width;
+//             c.cvsRedraw();
+//             c.cvsGradient();
+//             c.cvsClip(document.body.scrollTop-c.offsetTop+calib,17);
+//         });
+//         //initializing
+//         c.cvsRedraw();
+//         c.cvsGradient();
+//         c.cvsClip(document.body.scrollTop-c.offsetTop+calib,17);
+//     }
+// }

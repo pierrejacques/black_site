@@ -27,7 +27,7 @@ body{
     position: absolute;
     width:100%;
     top:0; left: 0;
-    z-index: -1000;  
+    z-index: -1000;
 }
 
 header{
@@ -38,13 +38,13 @@ header>h1{
 }
 
 header>h1>strong {
-    font-size: 7rem;
+    font-size: 5rem;
     letter-spacing: 0.9rem;
-    line-height: 8.6rem;
+    line-height: 6.5rem;
     text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 }
 header>h1>small {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family:'华文中宋','宋体',serif;
     letter-spacing: 1rem;
     color:#bbb;
@@ -55,17 +55,17 @@ header>h1>small {
 }
 nav>span {
     position: relative;
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin: 3em 1.5em;
     cursor: pointer;
     color:#bbb;
-    border-bottom:0.2rem solid transparent;
+    border-bottom:0.1rem solid transparent;
     font-family: 'futura_bookregular';
     text-shadow: 0 1px 0px black;
     transition: 0.3s ease-out;
 }
-nav>span:hover,nav>span.listen{   
-    border-bottom-color: inherit;  
+nav>span:hover,nav>span.listen{
+    border-bottom-color: inherit;
 }
 #works {
     display:inline-block;
@@ -101,7 +101,7 @@ div.line {
 }
 #works>.title,.line{
     background-size: 100% auto;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
 }
 #work.title{
     filter: brightness(150%);
@@ -116,7 +116,8 @@ div.line {
 /*    color:rgba(100, 200, 255, 0.8);*/
 }
 .music>h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
     margin:30px;
     cursor: pointer;
 }
@@ -125,20 +126,20 @@ div.line {
     width:450px;
     list-style-type:none;
     padding:15px;
-    border:3px solid;
+    border:3px solid gray;
 }
 .music>ul:hover{
     background-color: rgba(0, 0, 0, 0.4);
     transition: 0.2s;
+    border-color: white;
 }
 .music>ul>li {
     font-family:'华文中宋','宋体',serif;
     text-align: left;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     letter-spacing: 0.5rem;
     cursor: pointer;
     line-height: 3rem;
-    cursor: pointer;   
 }
 #about {
     font-family: Microsoft JhengHei,Dengxian,Microsoft Yahei,STHeiti,sans-serif;
@@ -294,19 +295,19 @@ canvas{
     opacity: 0.6;
     cursor: pointer;
     z-index: 1000000;
-    height:100px;
+    height:80px;
 }
 a#profile-download {
     position: absolute;
     right:0;
     top:0;
     display:inline-block;
-    height:50px;
-    width:50px;
+    height: 40px;
+    width: 40px;
     background-size:100% auto;
     background-repeat: no-repeat;
     background-position: center;
-    margin:1.5em;
+    margin: 1.5em;
     opacity: 0.7;
     cursor: pointer;
 }
@@ -330,7 +331,7 @@ a#profile-download {
     cursor: none;
     transition: 0.4s;
 }
-#contact>img:hover{ 
+#contact>img:hover{
     transform: scale(1.1);
 }
 
