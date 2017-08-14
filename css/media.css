@@ -1,0 +1,142 @@
+/*768 992 1200*/
+@media screen and (max-width: 1500px){
+    #works{
+        width:1100px;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    canvas{visibility: hidden;}
+    #works>div:not(.line):not(.title):hover,#web-1:hover{
+    border-radius: 2em;
+    padding:0;
+    border:0;
+    background-size: 100% auto;
+    filter: none;
+    }
+    #works{
+        width:880px;
+    }
+    #works>div{
+        width:200px;
+        height:200px;
+        margin:10px;
+/*        filter: saturate(50%)brightness(90%)contrast(120%);*/
+    }
+    #works>div.line,.empty{display: none;}
+    #works>.title:not(#web-1){
+    background-size: 80% auto;}  
+}  
+@media screen and (max-width: 992px){
+    header>h1>strong {
+    font-size: 6rem;
+    }
+    #works{
+        width:90vw;
+        max-width:calc(220px * 3);
+    }
+    #works>div{
+        width:28vw;
+        height:28vw;
+        max-width: 200px;
+        max-height: 200px;
+        margin:1vw;
+    }
+    #works>div.line{display: none;}
+    #works>.title:not(#web-1){
+    background-size: 80% auto;}
+}
+
+@media screen and (max-width: 767px){
+/*    body{background-image:none;background-color:black;}*/
+    header{
+        margin:0;
+    }
+    header>h1>small {
+    font-size: 2rem;
+    font-family: Microsoft JhengHei,Microsoft Yahei,STHeiti,sans-serif;
+    }
+    nav>span{
+        font-size: 1rem;
+        margin: 3rem 1rem;
+    }
+    .navbar-fixed-top{
+        display: block;
+        
+    }
+    nav>span.listen,nav>span:hover{
+/*    top:-3px;  */
+    border-bottom-width: 2px;
+    }
+    #works{
+         margin:0 auto;
+    }
+    div.line,div.empty{
+        display: none;
+    }
+    #about{
+        font-size: 1rem;
+        margin-top: 0;
+        line-height: 2.3rem;
+    }
+    .single{
+        display: block;   
+    }
+    #about>img {
+    border-radius: 50%;
+    margin:0 25% 50px;
+    width:50%;
+    }   
+    #about>div>div.icon {
+    height:50px;
+    margin: 10px 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+    cursor: pointer;
+    transition: 0.3s;
+    }
+    #about>div.folded>div.icon {
+    height:50px;
+    margin: 10px 0;
+    opacity: 0.7;
+    }
+    #contact {
+    margin:200px auto 15%;
+    width:100%;
+    font-size: 1rem;
+    }
+    #content {
+    height:80%;
+    top:0;
+    }
+    #content>img{
+    max-height: 60%;
+    }
+    #music-1{
+    margin-top:200px;
+    }
+    .music {
+    font-family: Microsoft JhengHei,Microsoft Yahei,STHeiti,sans-serif;
+    letter-spacing: 0.2rem;
+    margin-top:0;
+    }
+    .music>h2 {
+    font-size: 1.5rem;
+    margin:0 30px;
+    }
+    .music>ul {
+    width:80%;
+    margin: 10%;
+    }
+    .music>ul>li {
+    font-family: Microsoft JhengHei,Dengxian,Microsoft Yahei,STHeiti,sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    line-height: 2rem;
+    }
+    #skill>div>span>div{
+        font-size: 0.6rem;
+    }
+    
+}

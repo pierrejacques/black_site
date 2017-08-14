@@ -1,0 +1,340 @@
+@keyframes rotate{
+    from {        transform: rotate(0deg);    }    to{        transform: rotate(360deg);    }
+}
+
+@keyframes loading{
+    0% {transform: scale(0);opacity: 0;}
+    25% {border-radius:.5em;transform: none;opacity: 1;border:0.3em solid #1bcaff;}
+    50% {transform:rotate(.125turn);border:.4em solid #1bcaff;}
+    75% {transform:rotate(.25turn) rotateX(.5turn);opacity:1;border:.5em solid #ff6c10;}
+    100% {opacity:0;border:.2em solid #ff6c10;}
+}
+
+body{
+/*  color:rgba(255, 88, 48, 0.8);*/
+    font-family: 'futura_md_btmedium','corbel','YaHei',sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    background: url(../img/main_grad.jpg) #444;
+    background-repeat: no-repeat;
+    background-size:auto 100%;
+    background-position:center;
+    background-attachment:fixed;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+#background{
+    position: absolute;
+    width:100%;
+    top:0; left: 0;
+    z-index: -1000;  
+}
+
+header{
+    margin-top: 30vh;
+}
+header>h1{
+    margin:0 auto 35px;
+}
+
+header>h1>strong {
+    font-size: 7rem;
+    letter-spacing: 0.9rem;
+    line-height: 8.6rem;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+header>h1>small {
+    font-size: 2rem;
+    font-family:'华文中宋','宋体',serif;
+    letter-spacing: 1rem;
+    color:#bbb;
+}
+.navbar-fixed-top{
+    display: none;
+    padding-top:2rem;
+}
+nav>span {
+    position: relative;
+    font-size: 2rem;
+    margin: 3em 1.5em;
+    cursor: pointer;
+    color:#bbb;
+    border-bottom:0.2rem solid transparent;
+    font-family: 'futura_bookregular';
+    text-shadow: 0 1px 0px black;
+    transition: 0.3s ease-out;
+}
+nav>span:hover,nav>span.listen{   
+    border-bottom-color: inherit;  
+}
+#works {
+    display:inline-block;
+    margin:50vh auto 0;
+    width:1320px; /* 1320+2*12 in case need of margin*/
+}
+#works>div{
+    float: left;
+    box-sizing:border-box;
+    width:220px;
+    height:275px;
+    border:0 solid black;
+    background-size:100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+}
+div.line {
+    background-image: url(../icon/div-line.png);
+    opacity: 0.4;
+}
+#works>div>a{
+    display: block;
+    height:100%;
+}
+#works>div:not(.line):not(.title):not(.empty):hover{
+    cursor: pointer;
+    transition: 0.3s ease-out;
+    opacity:1;
+    border:1em solid rgba(0,0,0,0.95);
+    background-size: 120% auto;
+    filter: none;
+}
+#works>.title,.line{
+    background-size: 100% auto;
+    background-repeat: no-repeat; 
+}
+#work.title{
+    filter: brightness(150%);
+}
+#music-1{
+    margin-top:50vh;
+}
+.music {
+    font-family:'方正大标宋_GBK' ,'华文中宋','宋体',serif;
+    letter-spacing: 1rem;
+    color: inherit;
+/*    color:rgba(100, 200, 255, 0.8);*/
+}
+.music>h2 {
+    font-size: 2rem;
+    margin:30px;
+    cursor: pointer;
+}
+.music>ul {
+    display: inline-block;
+    width:450px;
+    list-style-type:none;
+    padding:15px;
+    border:3px solid;
+}
+.music>ul:hover{
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 0.2s;
+}
+.music>ul>li {
+    font-family:'华文中宋','宋体',serif;
+    text-align: left;
+    font-size: 1.8rem;
+    letter-spacing: 0.5rem;
+    cursor: pointer;
+    line-height: 3rem;
+    cursor: pointer;   
+}
+#about {
+    font-family: Microsoft JhengHei,Dengxian,Microsoft Yahei,STHeiti,sans-serif;
+    letter-spacing: auto;
+    color:hsla(0, 0%, 100%, 0.8);
+    margin-top:0;
+    text-align: left;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    display: inline-block;
+}
+#about>img{
+    margin:0 40% 40px;
+    width:20%;
+    border-radius: 50%;
+    cursor:pointer;
+    transition: 0.2s ease;
+}
+#about>img:hover,#about>div.folded>div.icon:hover {
+    transform: scale(1.08);
+}
+#about>div>ul.date{
+    list-style-type: disc;
+}
+#about>div>ul.event{
+    list-style-type: none;
+    text-align: right;
+}
+#about>div>ul.single{
+    text-align: left;
+    list-style-type: none;
+}
+#about>div>div.icon {
+    height:90px;
+    margin:20px 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 80%;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+#about>div.folded>div.icon {
+    height:70px;
+    margin: 20px auto 0;
+}
+.folded>ul,.single,.folded>div:not(.icon) {
+    display: none;
+}
+.skill-bar {
+    border: 3px solid hsla(199, 0%, 55%, 0.9);
+}
+.skill-bar>div{
+    height:10px;
+    background-color: hsla(199, 0%, 55%, 0.9);
+    width:0;
+}
+#contact {
+    margin: 500px auto 15%;
+    width:60%;
+    color: rgba(29, 183, 252, 0.78);
+    font-family: 'futura_md_btmedium';
+    font-weight: lighter;
+    font-size: 2rem;
+    vertical-align: middle;
+    padding:5% 2%;
+/*    border:4px solid rgba(29, 183, 252, 0.5);*/
+}
+#contact>div{
+    margin-bottom: 10px;
+}
+
+#detail{
+    position:fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index:10000;
+}
+#next,#prev,#close,#num,#down{
+    width:50px;
+    height:50px;
+    margin:10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    transition: 0.2s;
+    cursor: pointer;
+    position: fixed;
+}
+
+#next,#prev,#close{
+    border-radius: 50%;
+    border:2px solid white;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-size: auto 60%;
+}
+#close{top:1vw;right:1vw;}
+#prev{top:calc(50vh - 35px);left:1vw;}
+#next{top:calc(50vh - 35px);right:1vw;}
+#num{bottom:0;left:calc(50vw - 35px);}
+#down{
+    width:35px;
+    height:50px;
+    margin: auto;
+    top:15vh;
+    position: relative;
+}
+#down:hover{top:16vh;}
+#next:hover,#prev:hover,#close:hover,#down,#profile-download:hover{opacity: 1;}
+
+#content {
+    position: relative;
+    height:80%;
+    overflow: hidden;
+    top:10%;
+}
+.loading:after{
+    content:"";
+    position: absolute;
+    box-sizing: border-box;
+    width: 50px;
+    height:50px;
+    border-radius:50%;
+    border:0 solid white;
+    top:calc(50% - 25px);
+    right:calc(50% -25px);
+    animation: 3s loading;
+/*	animation-timing-function: linear;*/
+	animation-iteration-count: infinite;
+}
+#content>img{
+    position:absolute;
+    max-height: 100%;
+    max-width: 100%;
+    top:50%;
+    left:50vw;
+}
+
+canvas{
+    position: relative;
+    z-index: -1;
+    top:calc(-35vw + 50px);
+    width: 98vw;
+    height:35vw;
+}
+#playing{
+    position:fixed;
+    top:0;
+    left:0;
+    padding:1rem;
+    opacity: 0.6;
+    cursor: pointer;
+    z-index: 1000000;
+    height:100px;
+}
+a#profile-download {
+    position: absolute;
+    right:0;
+    top:0;
+    display:inline-block;
+    height:50px;
+    width:50px;
+    background-size:100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin:1.5em;
+    opacity: 0.7;
+    cursor: pointer;
+}
+#contact {
+    margin: 500px auto 15%;
+    width:500px;
+    color: white;
+    font-family: 'futura_bookregular';
+    font-weight: lighter;
+    font-size: 2rem;
+    vertical-align: middle;
+    padding:5% 2%;
+/*    border:4px solid rgba(29, 183, 252, 0.5);*/
+}
+#contact>div{
+    margin-bottom: 10px;
+}
+#contact>img{
+    width:100px;
+    margin-top:30px;
+    cursor: none;
+    transition: 0.4s;
+}
+#contact>img:hover{ 
+    transform: scale(1.1);
+}
+
+.rotate {
+    animation: rotate 2s infinite;
+    animation-timing-function: linear;
+}
