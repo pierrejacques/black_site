@@ -15,8 +15,8 @@
     }
 }
 
-@media screen and (max-width: 1300px){
-    canvas{visibility: hidden;}
+@media screen and (max-width: 1280px){
+		canvas{visibility: hidden;}
     #works>div:not(.line):not(.title):hover,#web-1:hover{
     border-radius: 2em;
     padding:0;

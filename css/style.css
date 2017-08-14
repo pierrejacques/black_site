@@ -9,7 +9,9 @@
     75% {transform:rotate(.25turn) rotateX(.5turn);opacity:1;border:.5em solid #ff6c10;}
     100% {opacity:0;border:.2em solid #ff6c10;}
 }
-
+html::-webkit-scrollbar {
+	width: 0;
+}
 body{
 /*  color:rgba(255, 88, 48, 0.8);*/
     font-family: 'futura_md_btmedium','corbel','YaHei',sans-serif;
@@ -17,7 +19,7 @@ body{
     text-align: center;
     background: url(../img/main_grad.jpg) #444;
     background-repeat: no-repeat;
-    background-size:auto 100%;
+    background-size: auto 100%;
     background-position:center;
     background-attachment:fixed;
     color: rgba(255, 255, 255, 0.95);

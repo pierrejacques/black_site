@@ -15,7 +15,7 @@ const moveeCanvas = c => {
     c.img = cImg;
     c.width = window.innerWidth - 10;
     c.height = c.width * c.img.height / c.img.width;
-    const calib = c.height * 0.6;
+    const calib = c.height * 1.2;
     c.r = c.classList.contains('right');
     c.cvsRedraw = () => { //redraw the Img
       const ctx = c.getContext('2d');
@@ -59,7 +59,6 @@ const moveeCanvas = c => {
       const str = `polygon(${side}% ${y0}%, ${x0}% 0%, ${x1}% 0%, ${side}% ${y1}%)`;
       c.style['clip-path'] = str;
       c.style['-webkit-clip-path'] = str;
-      console.log(c.style.clipPath);
     }
 
     //initialize
