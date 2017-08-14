@@ -1,5 +1,15 @@
 /*768 992 1200*/
 @media screen and (max-width: 1500px){
+    header>h1>strong {
+        font-size: 5rem;
+        line-height: 6.5rem;
+    }
+    header>h1>small {
+        font-size: 1.5rem;
+    }
+    nav>span {
+        font-size: 1.6rem;
+    }
     #works{
         width:1100px;
     }

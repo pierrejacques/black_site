@@ -38,13 +38,13 @@ header>h1{
 }
 
 header>h1>strong {
-    font-size: 5rem;
+    font-size: 7rem;
     letter-spacing: 0.9rem;
-    line-height: 6.5rem;
+    line-height: 7rem;
     text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 }
 header>h1>small {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family:'华文中宋','宋体',serif;
     letter-spacing: 1rem;
     color:#bbb;
@@ -55,7 +55,7 @@ header>h1>small {
 }
 nav>span {
     position: relative;
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin: 3em 1.5em;
     cursor: pointer;
     color:#bbb;
