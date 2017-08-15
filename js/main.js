@@ -148,7 +148,8 @@ $(document).ready(function(){
     //         moveeCanvas(canvas[i]);
     // }
 })
-
+// TODO: 部署本页面
+// TODO: 有空给这个页面做加速
 ////////////////////////canvas functions
 //
 // function moveeCanvas(c){
